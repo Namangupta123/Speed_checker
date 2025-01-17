@@ -16,7 +16,6 @@ app.add_middleware(
 async def checkSpeed():
     try:
         st = speedtest.Speedtest()
-        st.get_servers()
         st.get_best_server()
         downloadSpeed = st.download() / 1e6
         uploadSpeed = st.upload() / 1e6
